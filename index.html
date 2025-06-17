@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <button class="theme-toggle" id="themeToggle">🌓</button>
+        <div class="display">
+            <div class="history" id="history"></div>
+            <div class="current-input" id="currentInput">0</div>
+        </div>
+        <div class="scientific" id="scientificPanel">
+            <button class="operator" onclick="appendToInput('sin(')">sin</button>
+            <button class="operator" onclick="appendToInput('cos(')">cos</button>
+            <button class="operator" onclick="appendToInput('tan(')">tan</button>
+            <button class="operator" onclick="appendToInput('log(')">log</button>
+            <button class="operator" onclick="appendToInput('sqrt(')">√</button>
+            <button class="operator" onclick="appendToInput('(')">(</button>
+            <button class="operator" onclick="appendToInput(')')">)</button>
+            <button class="operator" onclick="appendToInput('Math.PI')">π</button>
+            <button class="operator" onclick="appendToInput('Math.E')">e</button>
+            <button class="operator" onclick="appendToInput('**2')">x²</button>
+        </div>
+        <button class="toggle-scientific" id="toggleScientific">Advanced ▼</button>
+        <div class="buttons">
+            <button class="clear" onclick="clearAll()">AC</button>
+            <button class="operator" onclick="appendToInput('/')">/</button>
+            <button class="operator" onclick="appendToInput('*')">×</button>
+            <button class="operator" onclick="backspace()">⌫</button>
+            <button onclick="appendToInput('7')">7</button>
+            <button onclick="appendToInput('8')">8</button>
+            <button onclick="appendToInput('9')">9</button>
+            <button class="operator" onclick="appendToInput('-')">-</button>
+            <button onclick="appendToInput('4')">4</button>
+            <button onclick="appendToInput('5')">5</button>
+            <button onclick="appendToInput('6')">6</button>
+            <button class="operator" onclick="appendToInput('+')">+</button>
+            <button onclick="appendToInput('1')">1</button>
+            <button onclick="appendToInput('2')">2</button>
+            <button onclick="appendToInput('3')">3</button>
+            <button class="equals" onclick="calculate()" id="equalsBtn">=</button>
+            <button onclick="appendToInput('0')" class="span-2">0</button>
+            <button onclick="appendToInput('.')">.</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
